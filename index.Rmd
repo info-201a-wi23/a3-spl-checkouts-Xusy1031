@@ -32,53 +32,20 @@ Feel free to calculate and report values that you find relevant.
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The first chart compares the difference between the total checkouts of two books, "Mrs. Dalloway" and "The Years". The two lines in the first chart represents two trends of the total checkouts of two books from 2022 to 2023. By looking at this chart, we can clearly see how the popularity of each book varies as time goes by. For example, we can notice that the general popularity of "Mrs. Dalloway" is higher than that of "The Years", ranging from *20* to *40*. However, the popularity of "The Years" suddenly peaks at *42* in October 2022, which is the highest number of the total checkout in this chart. 
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 1.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The second chart clearly shows how the total checkouts of each material type vary over time. By looking at this chart, we can see that the regprint is the least popular material type from 2022 to 2023, ranging from *100* to *300*. Generally speaking, the ebook and the audiobook are the most favored by people in Seattle. In January 2023, the total checkout of the audiobook reaches *21932*, which is the maximum amount of the total checkout in the second chart. 
 
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 2.R")}
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 ```
