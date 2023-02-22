@@ -10,6 +10,7 @@ df <- read.csv("~/Desktop/2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactor
 # The Years vs Mrs. Dalloway
 new_df <- df %>% 
   filter(Title %in% c("The Years", "Mrs. Dalloway")) %>% 
+  filter(Creator != "Annie Ernaux") %>% 
   select(-c(ISBN, Subjects, Publisher, PublicationYear)) %>% 
   mutate(Date = paste0(CheckoutYear, "-", CheckoutMonth, "-01"))
 new_df$Date <- as.Date(new_df$Date, format = "%Y-%m-%d")
@@ -20,8 +21,9 @@ checkouts_per_month <- new_df %>%
 
 ggplot(data = checkouts_per_month, aes(x = Date)) +
   geom_line(aes(y = sum, color = Title)) +
-  labs(title = "Checkouts of Two Books",
+  labs(title = "Checkouts of Two Books by Virginia Woolf",
        x = "Month",
        y = "Total Checkouts",
-       color = "Book Title")
+       color = "Book Title") +
+  scale_y_continuous(breaks = seq(0, 40, 5))
 

@@ -52,7 +52,7 @@ What are possible limitations or problems with this data?   (at least 200 words)
 
 ### First Trends Over Time Chart
 
-The first chart compares the difference between the total checkouts of two books, "Mrs. Dalloway" and "The Years". The two lines in the first chart represents two trends of the total checkouts of two books from 2022 to 2023. By looking at this chart, we can clearly see how the popularity of each book varies as time goes by. For example, we can notice that the general popularity of "Mrs. Dalloway" is higher than that of "The Years", ranging from *20* to *40*. However, the popularity of "The Years" suddenly peaks at *42* in October 2022, which is the highest number of the total checkout in this chart. 
+The first chart compares the difference between the total checkouts of two books, "Mrs. Dalloway" and "The Years", both written by Virginia Woolf. The two lines in the first chart represents two trends of the total checkouts of two books from 2022 to 2023. By looking at this chart, we can clearly see how the popularity of each book varies from 2022 to 2023. For example, we can notice that the total checkouts of "Mrs. Dalloway" are much higher than those of "The Years" generally, ranging from approximately *20* to *40*. By comparison, the total checkouts of "The Years" remain below *5*. 
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 1.R")}
 ```
