@@ -22,13 +22,33 @@ Feel free to calculate and report values that you find relevant.
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+Who collected/published the data?
 
+* The Seattle Public Library.
+
+What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+
+* Usage class, checkout type, material Type, checkout date, number of checkouts, book title,
+ISBN, book author, book type, publisher, publication year.
+There are 12 columns and 2757014 rows.
+  
+How was the data collected or generated?
+
+* The data was collected by a monthly count of the Seattle Public Library checkouts by book title for physical and digital books from 2022 to 2023.
+
+Why was the data collected?
+
+* The data was collected in order to understand the reading patterns (or trends) of people in Seattle.
+
+What, if any, ethical questions do you need to consider when working with this data? 
+
+* One ethical question would be whether the data is based on people's consent.
+
+What are possible limitations or problems with this data?   (at least 200 words)
+
+* One limitation is that the data is updated monthly, based on the sixth day of the month   with the previous month's data. Since the data is not updated every single day, the time     span of the data collection becomes relatively long, which has the possibility of limiting   the data. If the data is updated daily (though it is a lot of work), the relevant trends     can be shown much more clearly. Another limitation within the data is that the data does not take these books which have no checkouts during the chosen period into consideration. This limitation may make the date less powerful in terms of representing the Seattle Public Library.   
+
+* One problem within the data is that there are a number of missing values in the ISBN column as well as the Creator column. These missing values are likely to reduce the representativeness of the corresponding samples, which might lead to a reduction of the statistical power of the data. Another problem within the data is that some books have two versions: one is regular, and the other one is unabridged. This has a tendency to make the data repetitive, and adds some complexity to the analysis of the data.  
 
 ### First Trends Over Time Chart
 
