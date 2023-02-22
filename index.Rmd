@@ -2,14 +2,33 @@
 title: "A3: SPL Library Checkouts"
 output: html_document
 ---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+# Load necessary library
+library("dplyr")
+library("ggplot2")
+library("scales")
+library("tidyverse")
+library("stringr")
+
+# Load the dataset
+df <- read.csv("~/Desktop/2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
+
+# Source all R files
+source('Chart 1.R')
+source('Chart 2.R')
+source('Chart 3.R')
+source('summary.R')
+```
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+The dataset I am going to analyze is all checkouts in the Seattle Public Library from 2022 to 2023. The reason why I choose the dataset is that the time period included in the dataset is the most recent, which can help me understand the most recent trends based on the checkout data. The first trend I choose to analyze is about two books--The Years and Mrs. Dalloway--both written by Virginia Woolf. It is interesting to analyze how people like the two famous novels by Virginia Woolf who is one of the most important modernist 20th-century authors. The second trend I choose to focus on is the total checkouts of each material type. Since there are too many material types included in the dataset, I choose five remarkable materials types. By analyzing this trend, we can learn more about people's preferences in terms of "reading". The third chart analyzes the total checkouts of all 12 months in 2022 based on the usage class. The purpose of the third chart is to compare people's tastes with respect to digital and physical items. There is always a debate about which type of usage class is better, and I think it is fun to have real data to contribute to the question.
 
 ### Summary Information
 
-The first summary statistic calculates the month with the most checkouts for ebooks from 2022 to 2023, and it is September 2022. The second summary statistic is about the average number of checkouts for each usage class per month from 2022 to 2023: for digital items, the average number of checkouts is *395557*; for physical items, the average number of checkouts is *311904*. The third summary statistic calculates the month with the most checkouts for “Mrs. Dalloway", and the answer is July 2022. The fourth summary statistic unpacks the most frequent material type from 2022 to 2023, which is the book with *1105549* checkouts. The last summary statistic displays the item with the most checkouts in January 2023, and the item is headphones in the Seattle Public Library.
+The first summary statistic calculates the month with the most checkouts for ebooks from 2022 to 2023, and it is `r most_ebooks_month` 2022. The second summary statistic is about the average number of checkouts for each usage class per month from 2022 to 2023: for digital items, the average number of checkouts is *395557*; for physical items, the average number of checkouts is *311904*. The third summary statistic calculates the month with the most checkouts for “Mrs. Dalloway", and the answer is `r most_dalloway` 2022. The fourth summary statistic unpacks the most frequent material type from 2022 to 2023, which is the book with *1105549* checkouts. The last summary statistic displays the item with the most checkouts in January 2023, and the item is `r highest_item`.
 
 ### The Dataset
 
@@ -37,7 +56,7 @@ What, if any, ethical questions do you need to consider when working with this d
 
 What are possible limitations or problems with this data?   (at least 200 words)
 
-* One limitation is that the data is updated monthly, based on the sixth day of the month   with the previous month's data. Since the data is not updated every single day, the time     span of the data collection becomes relatively long, which has the possibility of limiting   the data. If the data is updated daily (though it is a lot of work), the relevant trends     can be shown much more clearly. Another limitation within the data is that the data does not take these books which have no checkouts during the chosen period into consideration. This limitation may make the date less powerful in terms of representing the Seattle Public Library.   
+* One limitation is that the data is updated monthly, based on the sixth day of the month with the previous month's data. Since the data is not updated every single day, the time span of the data collection becomes relatively long, which has the possibility of limiting the data. If the data is updated daily (though it is a lot of work), the relevant trends can be shown much more clearly. Another limitation within the data is that the data does not take these books which have no checkouts during the chosen period into consideration. This limitation may make the date less powerful in terms of representing the Seattle Public Library.   
 
 * One problem within the data is that there are a number of missing values in the ISBN column as well as the Creator column. These missing values are likely to reduce the representativeness of the corresponding samples, which might lead to a reduction of the statistical power of the data. Another problem within the data is that some books have two versions: one is regular, and the other one is unabridged. This has a tendency to make the data repetitive, and adds some complexity to the analysis of the data.  
 
@@ -45,21 +64,21 @@ What are possible limitations or problems with this data?   (at least 200 words)
 
 The first chart compares the difference between the total checkouts of two books, "Mrs. Dalloway" and "The Years", both written by Virginia Woolf. The two lines in the first chart represents two trends of the total checkouts of two books from 2022 to 2023. By looking at this chart, we can clearly see how the popularity of each book varies from 2022 to 2023. For example, we can notice that the total checkouts of "Mrs. Dalloway" are much higher than those of "The Years" generally, ranging from approximately *20* to *40*. By comparison, the total checkouts of "The Years" remain below *5*. 
 
-``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 1.R")}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 1.R")}
 ```
 
 ### Second Trends Over Time Chart
 
 The second chart clearly shows how the total checkouts of each material type vary over time. For clarity, I only count for material types that have more than *10000* checkouts each month, so there are top five material types in the second chart. By looking at this chart, we can see that the sounddisc is the least popular material type from 2022 to 2023, ranging from *10000* to *20000*. Generally speaking, the ebook and the book are the most favored by people in Seattle. In January 2023, the total checkout of the book reaches *269816*, which is the maximum amount of the total checkout in the second chart. 
 
-``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 2.R")}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 2.R")}
 ```
 
 ### Your Choice
 
 The third chart is a stacked bar chart, which is able to demonstrate the total checkouts of all 12 months in 2022 based on the usage class. Generally speaking, people prefer to use digital books rather than physical books in 2022. In August, the total checkout of digital books reaches its maximum at *416682*; while in January, the total checkout of physical books peaks at *339344*. Overall, there is no huge difference between the total checkout of each month, with January and August slightly higher. 
 
-``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 3.R")}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 3.R")}
 ```
 
 
