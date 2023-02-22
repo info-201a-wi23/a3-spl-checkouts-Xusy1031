@@ -59,7 +59,7 @@ The first chart compares the difference between the total checkouts of two books
 
 ### Second Trends Over Time Chart
 
-The second chart clearly shows how the total checkouts of each material type vary over time. By looking at this chart, we can see that the regprint is the least popular material type from 2022 to 2023, ranging from *100* to *300*. Generally speaking, the ebook and the audiobook are the most favored by people in Seattle. In January 2023, the total checkout of the audiobook reaches *21932*, which is the maximum amount of the total checkout in the second chart. 
+The second chart clearly shows how the total checkouts of each material type vary over time. For clarity, I only count for material types that have more than *10000* checkouts each month, so there are top five material types in the second chart. By looking at this chart, we can see that the sounddisc is the least popular material type from 2022 to 2023, ranging from *10000* to *20000*. Generally speaking, the ebook and the book are the most favored by people in Seattle. In January 2023, the total checkout of the book reaches *269816*, which is the maximum amount of the total checkout in the second chart. 
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 2.R")}
 ```

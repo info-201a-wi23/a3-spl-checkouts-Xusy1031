@@ -14,7 +14,7 @@ most_ebooks_month <- df %>%
   filter(most == max(most)) %>% 
   pull(CheckoutMonth)
 
-# What is the average number of checkouts for each usage class?
+# What is the average number of checkouts for each usage class each month?
 avg_checkouts <- df %>% 
   group_by(UsageClass) %>% 
   summarize(avg = mean(Checkouts)) %>% 
@@ -26,3 +26,12 @@ most_dalloway <- df %>%
   filter(Title == "Mrs. Dalloway") %>% 
   filter(Checkouts == max(Checkouts)) %>% 
   pull(CheckoutMonth)
+
+# What is the most frequent material type from 2022 to 2023?
+most_frequent_material_df <- df %>% 
+  group_by(MaterialType) %>% 
+  count() %>% 
+  arrange(-n)
+most_frequent_material <- most_frequent_material_df[1, ]
+
+
