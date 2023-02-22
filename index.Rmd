@@ -46,8 +46,9 @@ The second chart clearly shows how the total checkouts of each material type var
 
 ### Your Choice
 
+The third chart is a stacked bar chart, which is able to demonstrate the total checkouts of all 12 months in 2022 based on the usage class. Generally speaking, people prefer to use digital books rather than physical books in 2022. In August, the total checkout of digital books reaches its maximum at *416682*; while in January, the total checkout of physical books peaks at *339344*. Overall, there is no huge difference between the total checkout of each month, with January and August slightly higher. 
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart 3.R")}
 ```
 
 
