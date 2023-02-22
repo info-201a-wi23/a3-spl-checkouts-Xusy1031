@@ -9,16 +9,7 @@ An introduction of the data and a description of the trends/books/items you are 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+The first summary statistic calculates the month with the most checkouts for ebooks from 2022 to 2023, and it is September 2022. The second summary statistic is about the average number of checkouts for each usage class per month from 2022 to 2023: for digital items, the average number of checkouts is *395557*; for physical items, the average number of checkouts is *311904*. The third summary statistic calculates the month with the most checkouts for “Mrs. Dalloway", and the answer is July 2022. The fourth summary statistic unpacks the most frequent material type from 2022 to 2023, which is the book with *1105549* checkouts. The last summary statistic displays the item with the most checkouts in January 2023, and the item is headphones in the Seattle Public Library.
 
 ### The Dataset
 
