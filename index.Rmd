@@ -1,5 +1,6 @@
 ---
 title: "A3: SPL Library Checkouts"
+author: "Siyi Xu"
 output: html_document
 ---
 ```{r setup, include = FALSE}
@@ -28,7 +29,7 @@ The dataset I am going to analyze is all checkouts in the Seattle Public Library
 
 ### Summary Information
 
-The first summary statistic calculates the month with the most checkouts for ebooks from 2022 to 2023, and it is `r most_ebooks_month` 2022. The second summary statistic is about the average number of checkouts for each usage class per month from 2022 to 2023: for digital items, the average number of checkouts is *395557*; for physical items, the average number of checkouts is *311904*. The third summary statistic calculates the month with the most checkouts for “Mrs. Dalloway", and the answer is `r most_dalloway` 2022. The fourth summary statistic unpacks the most frequent material type from 2022 to 2023, which is the book with *1105549* checkouts. The last summary statistic displays the item with the most checkouts in January 2023, and the item is `r highest_item`.
+The first summary statistic calculates the month with the most checkouts for ebooks from 2022 to 2023, and it is `r ebook_month`. The second summary statistic is about the average number of checkouts for each usage class per month from 2022 to 2023: for digital items, the average number of checkouts is `r digital`; for physical items, the average number of checkouts is `r physical`. The third summary statistic calculates the month with the most checkouts for “Mrs. Dalloway", and the answer is `r dalloway_month`. The fourth summary statistic unpacks the most frequent material type from 2022 to 2023, which is the `r most_frequent_material` with `r material_number` checkouts. The last summary statistic displays the item with the most checkouts in January 2023, and the item is `r highest_item`.
 
 ### The Dataset
 
